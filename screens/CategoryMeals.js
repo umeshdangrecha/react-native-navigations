@@ -1,19 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
-import { MealsNavigatorScreens } from "../navigation/MealNavigator";
+import { CATEGORIES } from "../data/dummy-data";
 
 const CategoryMeals = (props) => {
+  const catId = props.navigation.getParam("categoryId");
+  const selectedData = CATEGORIES.find((item) => item.id === catId);
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>CategoryMeals</Text>
-      <Button
-        title="Go to meals Detail Screen"
-        onPress={() => {
-          props.navigation.navigate({
-            routeName: MealsNavigatorScreens.MealDetail,
-          });
-        }}
-      />
     </View>
   );
 };

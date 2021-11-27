@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Button,
   FlatList,
   TouchableOpacity,
   Platform,
@@ -20,6 +19,9 @@ const CategoriesScreen = (props) => {
         onPress={() => {
           props.navigation.navigate({
             routeName: MealsNavigatorScreens.CategoryMeals,
+            params: {
+              categoryId: itemData.item.id,
+            },
           });
         }}
       >
