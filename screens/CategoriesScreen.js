@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+import { MealsNavigatorScreens } from "../navigation/MealNavigator";
 
 const CategoriesScreen = (props) => {
   console.log("CategoriesScreen", props);
@@ -9,7 +10,9 @@ const CategoriesScreen = (props) => {
       <Button
         title="Go to meals"
         onPress={() => {
-          props.navigation.navigate({ routeName: "CategoryMeals" });
+          props.navigation.navigate({
+            routeName: MealsNavigatorScreens.CategoryMeals,
+          });
         }}
       />
     </View>

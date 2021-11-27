@@ -4,12 +4,18 @@ import CategoriesScreen from "../screens/CategoriesScreen";
 import CategoryMeals from "../screens/CategoryMeals";
 import MealDetailScreen from "../screens/MealDetailScreen";
 
+export const MealsNavigatorScreens = {
+  CategoriesScreen: "CategoriesScreen",
+  CategoryMeals: "CategoryMeals",
+  MealDetail: "MealDetail",
+};
+
 const MealsNavigator = createStackNavigator({
-  Categories: CategoriesScreen,
-  CategoryMeals: {
+  [MealsNavigatorScreens.CategoriesScreen]: CategoriesScreen,
+  [MealsNavigatorScreens.CategoryMeals]: {
     screen: CategoryMeals,
   },
-  MealDetail: MealDetailScreen,
+  [MealsNavigatorScreens.MealDetail]: MealDetailScreen,
 });
 
 export default createAppContainer(MealsNavigator);
