@@ -8,7 +8,7 @@ const MealDetailScreen = (props) => {
       <Button
         title="Back"
         onPress={() => {
-          props.navigation.goBack();
+          props.navigation.popToTop();
         }}
       />
     </View>
