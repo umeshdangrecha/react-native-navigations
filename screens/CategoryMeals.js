@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const CategoryMeal = (props) => {
+const CategoryMeals = (props) => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>CategoryMeal</Text>
+      <Text>CategoryMeals</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default CategoryMeal;
+export default CategoryMeals;
