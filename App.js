@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
-import MealNavigation from "./navigation/MealNavigation";
+import MealNavigator from "./navigation/MealNavigator";
 
 const fetchFonts = () => {
   Font.loadAsync({
@@ -22,5 +22,5 @@ export default function App() {
       />
     );
   }
-  return <MealNavigation />;
+  return <MealNavigator />;
 }
